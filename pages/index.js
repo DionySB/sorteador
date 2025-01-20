@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { sortRoles } from './config/steps';
 
 export default function Home() {
   const [step, setStep] = useState(1);
@@ -13,6 +12,11 @@ export default function Home() {
   const [assignments, setAssignments] = useState([]);
   const [errors, setErrors] = useState([]);
 
+  const sortRoles = (playerNames, availableRoles) => {
+    const shuffledRoles = [...availableRoles].sort(() => Math.random() - 0.5);
+    return playerNames.map((name, index) => ({ name, role: shuffledRoles[index] || 'Sem cargo' }));
+  };
+  
   const handleRoleToggle = (role) => {
     const updatedRoles = { ...roles, [role]: !roles[role] };
     setRoles(updatedRoles);
