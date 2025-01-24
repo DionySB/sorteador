@@ -1,11 +1,10 @@
 body {
   height: 100%;
   width: 100%;
-  overflow: hidden; /* Desabilita o scroll */
   background-color: #1a1a1a;
   font-family: "Nunito Sans", serif;
-  margin: 0; /* Remove possíveis margens padrão */
-  display: flex; /* Centraliza o conteúdo */
+  margin: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
